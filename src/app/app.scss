@@ -1,6 +1,20 @@
 // http://ionicframework.com/docs/theming/
 
 
+@import"../theme/icons.scss";
+
+.login-header{
+    --theme-color: #948b7454;
+    background: var(--theme-color);
+
+}
+.logo-img{
+
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+}
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These

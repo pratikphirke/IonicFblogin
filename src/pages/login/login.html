@@ -1,0 +1,63 @@
+<!--<ion-header>
+  <ion-navbar>
+    <ion-title center text-center>Login</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="logindirect()" end>
+        <ion-icon  slot="icon-only"  name="md-checkmark-circle-outline"></ion-icon>
+    
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+-->
+  <ion-content padding id="login">
+    <ion-grid>
+      <ion-row>
+        <ion-col center text-center>
+        <img src="assets/imgs/hash.png" class="logo"/>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <form [formGroup]="loginForm" (submit)="loginEmail()" novalidate>
+    <ion-item>
+      <ion-icon name='mail' item-left></ion-icon>
+      <ion-input #email formControlName="email" type="email" placeholder="Your email address"></ion-input>
+    </ion-item>
+    <div *ngFor="let validation of validation_messages.email" >
+      <div *ngIf="loginForm.get('email').hasError(validation.type) && loginForm.get('email').touched">
+        <div class="error-message">{{validation.message}}</div>
+      </div>
+    </div>
+    <ion-item>
+      <ion-icon name='lock' item-left></ion-icon>
+      <ion-input #password formControlName="password" type="password" placeholder="Your password"></ion-input>
+    </ion-item>
+    <div *ngFor="let validation of validation_messages.password" >
+      <div *ngIf="loginForm.get('password').hasError(validation.type) && loginForm.get('password').touched">
+        <div class="error-message">{{validation.message}}</div>
+      </div>
+    </div>
+    <button ion-button block type="submit">
+      Login
+    </button>
+  </form>
+  <div padding>
+    <button ion-button block clear (click)="register()">No have an account? Register Now </button>
+    <button ion-button block clear (click)="resetPwd()">
+      Forgot Password
+    </button>
+    <span class="divider line one-line">or</span>
+    <button ion-button full (click)="loginWithFB()">Login with facebook</button>
+    </div>
+  
+    <ion-card *ngIf="userData">
+      <ion-card-header>{{ userData.username }}</ion-card-header>
+      <img [src]="userData.picture" />
+      <ion-card-content>
+        <p>Email: {{ userData.email }}</p>
+        <p>First Name: {{ userData.first_name }}</p>
+      </ion-card-content>
+    </ion-card>
+
+  <!--  <button ion-button full (click)="loginWithFB()">Login with facebook</button>-->
+  </ion-content>

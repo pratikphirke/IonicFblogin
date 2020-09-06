@@ -1,0 +1,50 @@
+ion-icon {
+    &[class*="custom-"] {
+      mask-size: contain;
+      mask-position: 50% 50%;
+      mask-repeat: no-repeat;
+      background: currentColor;
+      width: 1.5em;
+      height: 1.5em;
+      margin-top: 0px;
+      margin-right: 7px;
+        // max-width: 30px;
+        //border: 0;
+      float: right;
+    }
+  
+    &[class*="custom-ellipsis-vertical-sharp"] {
+      mask-image: url(../assets/icon/ellipsis-vertical-sharp.svg);
+    }
+    &[class*="custom-add-circle-outline"] {
+        mask-image: url(../assets/icon/add-circle-outline.svg);
+    }
+    &[class*="custom-exit-outline"] {
+        mask-image: url(../assets/icon/exit-outline.svg);
+    }
+    &[class*="custom-trash"] {
+        mask-image: url(../assets/icon/trash.svg);
+    }
+    &[class*="custom-information-circle-outline"] {
+        mask-image: url(../assets/icon/information-circle-outline.svg);
+    }
+    &[class*="custom-person-circle-outline"] {
+      mask-image: url(../assets/icon/person-circle-outline.svg);
+    }
+    &[class*="custom-document-text-outline"] {
+      mask-image: url(../assets/icon/document-text-outline.svg);
+    }
+    &[class*="custom-share-social-sharp"] {
+      mask-image: url(../assets/icon/share-social-sharp.svg);
+    }
+    &[class*="custom-share-social"] {
+      mask-image: url(../assets/icon/share-social.svg);
+    }
+    &[class*="custom-call"] {
+      mask-image: url(../assets/icon/call.svg);
+    }
+    &[class*="custom-chevron-up-circle-outline"] {
+      mask-image: url(../assets/icon/chevron-up-circle-outline.svg);
+    }
+    
+  }
