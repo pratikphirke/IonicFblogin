@@ -1,0 +1,70 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>addCustomer</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding id="signup">
+
+  <ion-content padding id="registration-form">
+    <form [formGroup]="registrationForm" class="registration-form" (ngSubmit)="register()" novalidate>
+<ion-list>
+
+      <ion-item>
+        <ion-icon name="ios-contact" item-left></ion-icon>
+        <ion-input type="text" formControlName="firstName" placeholder="First Name"></ion-input>
+      </ion-item>
+
+      <div *ngFor="let validation of validation_messages.firstName" >
+        <div *ngIf="registrationForm.get('firstName').hasError(validation.type) && registrationForm.get('firstName').touched">
+          <span class="error-message">{{validation.message}}</span>
+        </div>
+      </div>
+      
+      
+      <ion-item>
+        <ion-icon name="ios-contact" item-left></ion-icon>
+        <ion-input type="text" formControlName="lastName" placeholder="Last Name"></ion-input>
+      </ion-item>
+      <div *ngFor="let validation of validation_messages.lastName" >
+        <div *ngIf="registrationForm.get('lastName').hasError(validation.type) && registrationForm.get('lastName').touched">
+          <div class="error-message">{{validation.message}}</div>
+        </div>
+      </div>
+      <ion-item>
+        <ion-icon name="mail" item-left></ion-icon>
+        <ion-input type="email" formControlName="email" placeholder="Email"></ion-input>
+      </ion-item>
+      <div *ngFor="let validation of validation_messages.email" >
+        <div *ngIf="registrationForm.get('email').hasError(validation.type) && registrationForm.get('email').touched">
+          <div class="error-message">{{validation.message}}</div>
+        </div>
+      </div>
+      <ion-item>
+        <ion-icon name="md-call" item-left></ion-icon>
+        <ion-input type="number" formControlName="mobile" placeholder="Mobile"></ion-input>
+      </ion-item>
+      <div *ngFor="let validation of validation_messages.mobile" >
+        <div *ngIf="registrationForm.get('mobile').hasError(validation.type) && registrationForm.get('mobile').touched">
+          <div class="error-message">{{validation.message}}</div>
+        </div>
+      </div>
+      <ion-item>
+        <ion-icon name="md-pin" item-left></ion-icon>
+        <ion-textarea formControlName="address" placeholder="Address" ></ion-textarea>
+      </ion-item>
+      <div *ngFor="let validation of validation_messages.address" >
+        <div *ngIf="registrationForm.get('address').hasError(validation.type) && registrationForm.get('address').touched">
+          <div class="error-message">{{validation.message}}</div>
+        </div>
+      </div>
+      
+    </ion-list>
+      <button ion-button full  type="submit">ADD </button> 
+      
+      
+    </form>
+  </ion-content>
+</ion-content>

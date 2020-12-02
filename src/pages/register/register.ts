@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController, LoadingController } from 'ionic-angular';
+import { AbstractControl, FormBuilder, ValidatorFn, Validators } from '@angular/forms';
+import { AlertController, IonicPage, LoadingController, NavController, NavParams } from 'ionic-angular';
 import { ServicesProvider } from '../../providers/services/services';
-import { FormBuilder, Validators, ValidatorFn, AbstractControl } from '@angular/forms';
-import { LoginPage } from '../login/login';
-import { HomePage } from '../home/home';
 
 
 @IonicPage()
@@ -66,7 +64,7 @@ export class RegisterPage {
     this[field + "Changed"] = true;
   }
 
-  doRegister(){
+ /* doRegister(){
     this.submitAttempt = true;
 
     if (!this.registerForm.valid){
@@ -96,5 +94,5 @@ export class RegisterPage {
       this.loading.present();
     }
   }
-
+*/
 }

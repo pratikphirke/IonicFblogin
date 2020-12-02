@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController, LoadingController } from 'ionic-angular';
-import { ServicesProvider } from '../../providers/services/services';
 import { FormBuilder, Validators } from '@angular/forms';
-import { HomePage } from '../home/home';
+import { AlertController, IonicPage, LoadingController, NavController, NavParams } from 'ionic-angular';
+import { ServicesProvider } from '../../providers/services/services';
 
 @IonicPage()
 @Component({
@@ -45,7 +44,7 @@ export class ResetPasswordPage {
     this[field + "Changed"] = true;
   }
 
-  resetPwd() {
+ /* resetPwd() {
     if (!this.resetpwdForm.valid){
       console.log(this.resetpwdForm.value);
     } else {
@@ -73,6 +72,6 @@ export class ResetPasswordPage {
     }
   }
 
- 
+*/ 
 
 }
